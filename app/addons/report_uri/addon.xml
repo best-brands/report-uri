@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<addon scheme="4.0">
+    <id>report_uri</id>
+    <name>Report-Uri.com</name>
+    <description>Allows to you to define the report-uri.com headers easily</description>
+    <version>1.0</version>
+    <priority>2300</priority>
+    <position>0</position>
+    <status>active</status>
+    <supplier>Best Brands</supplier>
+    <supplier_link>https://github.com/best-brands</supplier_link>
+    <default_language>en</default_language>
+
+    <authors>
+        <author>
+            <name>Harm Smits</name>
+            <email>harm@bestbrands.eu</email>
+            <phone>+31625500655</phone>
+        </author>
+    </authors>
+
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="reporting_endpoint">
+                        <type>input</type>
+                        <name>Reporting endpoint</name>
+                        <default_value></default_value>
+                        <variants/>
+                    </item>
+                    <item id="network_error_logging">
+                        <type>checkbox</type>
+                        <name>Network error logging</name>
+                        <default_value>Y</default_value>
+                        <variants/>
+                    </item>
+                    <item id="content_security_policy">
+                        <type>input</type>
+                        <name>Content security policy</name>
+                        <default_value></default_value>
+                        <variants/>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+
+    <autoload>
+        <psr4 prefix="Tygh\Addons\ReportUri\">src</psr4>
+    </autoload>
+
+    <bootstrap>\Tygh\Addons\ReportUri\Bootstrap</bootstrap>
+</addon>
